@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Keep Notes</title>
+</head>
+<body>
+    <header>
+        <h1><a href="https://github.com/TheProjectsX">The Projects X</a></h1>
+        <p>Let's Build Something NEW!</p>
+    </header>
+
+    <div class="container">
+        <h2 class="title">Keep your Notes</h2>
+        <button class="showAddNote" id="showAddNote">Add Note</button>
+        <div class="addNote">
+            <input type="text" id="newNoteTitle" placeholder="Enter note Title">
+            <textarea name="newNoteBody" id="newNoteBody" cols="30" rows="10" placeholder="Enter your Note"></textarea>
+            <div class="addNoteButtons">
+                <button id="hideAddNote">Hide</button>
+                <button id="newNoteAdd">Add</button>
+            </div>
+        </div>
+
+        <div class="noteList">
+            <!-- This is a Template -->
+            <!-- <div class="noteItem">
+                <p class="noteTitle">Hack NASA & Google</p>
+                <p class="noteBody">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, cumque!</p>
+                <div class="buttons">
+                    <button class="noteView" onclick="viewtNote(this)">View</button>
+                    <button class="noteEdit" onclick="editNote(this)">Edit</button>
+                    <button class="noteDelete" onclick="deleteNote(this)">Delete</button>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="editNote">
+            <input type="text" id="editNoteTitle" disabled>
+            <textarea name="editNoteBody" id="editNoteBody" cols="30" rows="10" disabled></textarea>
+
+            <div class="buttons">
+                <button id="editNoteEditButton">Edit</button>
+                <button id="editNoteCloseButton">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="copyright">Copyright &copy; Modasser Hasan. All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

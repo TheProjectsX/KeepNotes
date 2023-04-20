@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: dodgerblue;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+textarea{
+    resize: none;
+}
+
+header{
+    margin-block: 1.5rem 2rem;
+}
+
+header h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: .2rem;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+header p{
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 35px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.showAddNote{
+    display: inline;
+    width: 280px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.showAddNote:hover{
+    cursor: pointer;
+}
+
+.showAddNote:active{
+    font-size: 15px;
+    padding: 12px;
+}
+
+
+.editNote{
+    display: none;
+
+    position: absolute;
+    top: 25%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: dodgerblue;
+    box-shadow: 0 0 12px 8px #ffffff50;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.editNote input:disabled, .editNote textarea:disabled{
+    background-color: white;
+    color: black;
+}
+
+.addNote{
+    display: none;
+
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s ease-in-out; 
+}
+
+.addNote *, .editNote *{
+    width: 280px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.addNote input, .addNote textarea, .editNote input, .editNote textarea{
+    outline: none;
+    border: 3px solid gray;
+    margin-bottom: 10px;
+}
+
+.addNote input:focus, .addNote textarea:focus, .editNote input:focus, .editNote textarea:focus{
+    border-color: black;
+}
+
+.addNoteButtons, .editNote .buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.addNote button, .editNote button{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    width: 48%;
+}
+
+
+.addNoteButtons button:hover, .editNote .buttons button:hover{
+    cursor: pointer;
+}
+
+.addNote button:active, .editNote .buttons button:active{
+    font-size: 14px;
+    padding: 11px;
+}
+
+.noteList{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-block: 20px 50px;
+}
+
+.noteItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 15px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: calc(300px - 10px);
+    height: 155px;
+    overflow: hidden;
+}
+
+.noteText{
+    flex-grow: 1;
+    color: #0024d7;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.noteBody{
+    padding: 10px;
+    overflow: hidden;
+}
+
+.noteItem .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.noteItem button{
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 6px 12px;
+    background-color: white;
+}
+
+.noteItem button:hover{
+    cursor: pointer;
+}
+
+.noteItem .noteView:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+
+.noteItem .noteEdit:hover{
+    background-color: gray;
+    color: white;
+}
+
+.noteItem .noteDelete:hover{
+    background-color: red;
+    color: white;
+}
+
+.noteItem .noteView:active, .noteItem .noteEdit:active, .noteItem .noteDelete:active{
+    border-color: dodgerblue;
+    background-color: white;
+    color: dodgerblue;
+}
+
+
+.copyright{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+}
