@@ -81,6 +81,14 @@ header p{
     border-radius: 10px;
 }
 
+
+@media (width < 414px){
+    .editNote{
+        padding: 30px 20px;
+    }
+}
+
+
 .editNote input:disabled, .editNote textarea:disabled{
     background-color: white;
     color: black;
